@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soldier Registration</title>
+    <!-- <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .container {
+            width: 60%;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        fieldset {
+            border: 2px solid #ccc;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            background-color: #f9f9f9;
+        }
+
+        legend {
+            font-size: 1.5em;
+            color: #555;
+            font-weight: bold;
+            padding: 5px 15px;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+
+        label {
+            font-size: 1.1em;
+            color: #333;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        input[type="text"], input[type="number"], input[type="date"], input[type="email"], input[type="password"], input[type="tel"], input[type="url"], select, textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1em;
+            background-color: #f4f4f4;
+            transition: all 0.3s ease;
+        }
+
+        input[type="text"]:focus, input[type="number"]:focus, input[type="date"]:focus, input[type="email"]:focus, input[type="password"]:focus, input[type="tel"]:focus, input[type="url"]:focus, select:focus, textarea:focus {
+            border-color: #888;
+            outline: none;
+            box-shadow: 0 0 5px rgba(136, 136, 136, 0.5);
+        }
+
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        .equipment-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .equipment-item {
+            flex: 1 1 45%;
+            margin-bottom: 20px;
+        }
+
+        .submit-btn {
+            display: block;
+            width: 100%;
+            background-color: #007bff;
+            color: #fff;
+            padding: 15px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        /* Hover effects for fieldset and labels */
+        fieldset:hover {
+            border-color: #007bff;
+        }
+
+        label:hover {
+            color: #007bff;
+        }
+    </style> -->
+</head>
+<body>
+
+<div class="container">
+    <h1>Soldier and Equipment Registration</h1>
+    
+    <form action="#" method="POST">
+        <fieldset>
+            <legend>Soldier Information</legend>
+            
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter full name" required>
+            
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" placeholder="Enter age" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter email" required>
+            
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob" required>
+            
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter phone number" required>
+
+            <label>Gender</label>
+            <label for="male">
+                <input type="radio" id="male" name="gender" value="Male" required> Male
+            </label>
+            <label for="female">
+                <input type="radio" id="female" name="gender" value="Female" required> Female
+            </label>
+            
+            <label for="rank">Rank</label>
+            <select id="rank" name="rank" required>
+                <option value="Private">Private</option>
+                <option value="Corporal">Corporal</option>
+                <option value="Sergeant">Sergeant</option>
+                <option value="Lieutenant">Lieutenant</option>
+                <option value="Captain">Captain</option>
+            </select>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter password" required>
+
+            <label for="color">Favorite Color</label>
+            <input type="color" id="color" name="color">
+        </fieldset>
+        
+        <fieldset>
+            <legend>Equipment Information</legend>
+            
+            <div class="equipment-list">
+                <div class="equipment-item">
+                    <label for="weapon">Weapon</label>
+                    <input type="text" id="weapon" name="weapon" placeholder="Weapon name" required>
+                </div>
+                <div class="equipment-item">
+                    <label for="armor">Armor</label>
+                    <input type="text" id="armor" name="armor" placeholder="Armor type" required>
+                </div>
+                <div class="equipment-item">
+                    <label for="vehicle">Vehicle</label>
+                    <input type="text" id="vehicle" name="vehicle" placeholder="Vehicle name">
+                </div>
+                <div class="equipment-item">
+                    <label for="other-equipment">Other Equipment</label>
+                    <input type="text" id="other-equipment" name="other-equipment" placeholder="Other equipment">
+                </div>
+            </div>
+
+            <label for="range">Skill Level</label>
+            <input type="range" id="range" name="range" min="1" max="10">
+
+            <label for="bio">Short Biography</label>
+            <textarea id="bio" name="bio" placeholder="Enter your short biography"></textarea>
+
+            <label for="terms">
+                <input type="checkbox" id="terms" name="terms" required> I agree to the terms and conditions
+            </label>
+        </fieldset>
+        
+        <button type="submit" class="submit-btn">Register Soldier</button>
+    </form>
+</div>
+
+</body>
+</html>
