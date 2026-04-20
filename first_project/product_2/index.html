@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+</head>
+<link rel="stylesheet" href="style.css">
+
+<script>
+    function submitForm() {
+
+        let firstName = document.querySelector('input[placeholder="Maya..."]').value;
+        let lasttName = document.querySelector('input[placeholder="Majid..."]').value;
+        let age = document.querySelector('input[type="number"]').value;
+
+        if ( firstName === "" || lasttName === "" || age === "") {document.getElementById("result").innerText = " ⚠️ Please fill in all required  fields!";
+            return;
+           }
+           document.getElementById("result").innerText = 
+           "Profile saved! Welcome..." + firstName + "" + lastName + "(" + age + ")";
+    }
+
+
+
+
+
+
+</script>
+<body>
+
+<section class="section">
+
+<h1><b>Profile Card</b></h1>
+
+        <div  class="row">
+        <label>Photo:</label>
+        <input type="file">
+        </div>
+
+    <div class="row">
+        <div class="field" id="firstName" type="text">
+        <label><b>First Name:</b></label>
+        <input type="text" placeholder="Maya...">
+</div>
+        
+        <div class="field">
+        <label><b>Last Name:</b></label>
+        <input type="text" id="lastName" placeholder="Majid...">
+        </div>
+
+        <div class="field">
+        <label><b>Age:</b></label>
+        <input type="number" id="age" placeholder="25...">
+        </div>
+        </div>
+
+        <div class="row">
+        <div class="field" id="birth" type="">
+        <label><b>Birth:</b></label>
+        <input type="date" id="birth">
+        </div>
+
+        
+        <div class="field">
+        <label><b>Country:</b></label>
+        
+        <select>
+            <option value="region">Sweden</option>
+            <option value="region">United Kingdom</option>
+            <option value="region">Iceland</option>
+            <option value="region">Malaysia</option>
+            <option value="region">Singaphore</option>
+            <option value="region">Eygpt</option>
+            <option value="region">Norway</option>
+            <option value="region">United State</option>
+            <option value="region">Kuait</option>
+            <option value="region">Germany</option>
+            <option value="region">Ethopia</option>
+            <option value="region">Somalia</option>
+            <option value="region">Saudi Arabia</option>
+            <option value="region">Qatar</option>
+            <option value="region">Kenya</option>
+            <option value="region">Negeria</option>
+            <option value="region">South Africa</option>
+            <option value="region">Japan</option>
+            <option value="region">China</option>
+            <option value="region">North Korea</option>
+            <option value="region">South Korea</option>
+            <option value="region">Denmark</option>
+            <option value="region">Oman</option>
+            <option value="region">Jordan</option>
+            <option value="region">Yemen</option>
+            <option value="region">Moroco</option>
+            <option value="region">Syria</option>
+            <option value="region">Iraq</option>
+            <option value="region">New Zeland</option>
+            <option value="region">Greece</option>
+            <option value="region">Belguim</option>
+            <option value="region">Switzerland</option>
+            <option value="region">Other..</option>
+        </select>
+        </div>
+        </div>
+
+        <div class="column">
+        <label><b>About Yourself:</b></label>
+        <input type="text" id="AboutYourself"   placeholder="paragraph.......">
+        </div>
+        
+        <div class="column">
+            <p><b>Do You Have Work Experience?</b></p>
+        <label>
+        <input type="radio" name="work" id="Yes"> Yes
+        </label>
+
+        <label>
+        <input type="radio" name="work" id="No"> No
+        </label>
+        </div>
+
+        <div class="column">
+        <label><b>Your Work Experience:</b></label>
+        <input type="text" id="yourWorkExperience"  placeholder="I worked.......">
+        </div>
+
+        <div class="column">
+        <label><b>Companies Worked For:</b></label>
+        <select>
+            <option value="region">Microsoft</option>
+            <option value="region">Apple</option>
+            <option value="region">Clouds</option>
+            <option value="region">SamSung</option>
+            <option value="region">Amazon</option>
+            <option value="region">Hawaie</option>
+            <option value="region">Other...</option>
+        </select>
+    </div>
+
+     <button  class="button" onclick="submitForm()">Submit Profile</button>
+     <p id="result"></p>
+    </section>
+</body>
+</html> 
